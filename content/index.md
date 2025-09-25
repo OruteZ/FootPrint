@@ -1,8 +1,3 @@
 ---
-title: Home
+title: Foot Print
 ---
-# PS
-[[PS_BOJ/]]
-
-# Algorithm
-[[Algorithm/]]
