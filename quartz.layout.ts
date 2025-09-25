@@ -1,4 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
+import { Header } from "./quartz/components/Header"
+
 import * as Component from "./quartz/components"
 
 // components shared across all pages
