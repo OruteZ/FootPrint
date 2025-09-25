@@ -1,17 +1,15 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: Component.Header({
-    title: "Foot Print",
-    links: [
-      { text: "Projects", link: "/projects" },
-      { text: "Notes",    link: "/notes" },
-      { text: "About",    link: "/about" },
-    ],
-  }),
+  header: [
+    Component.PageTitle(),   // 사이트/페이지 타이틀
+    Component.Spacer(),      // 왼쪽 타이틀 ↔ 오른쪽 아이콘 사이 간격
+    // 여기 뒤에 검색/다크모드 등 헤더용 버튼 배치
+    Component.Search(),
+    Component.Darkmode(),
+  ],
   afterBody: [],
   footer: Component.Footer({
     links: {
