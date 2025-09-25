@@ -1,0 +1,1 @@
+[Fast Inverse Square Root (WTF Function)](obsidian://vault/quartz/Fast%20Inverse%20Square%20Root%20(WTF%20Function))

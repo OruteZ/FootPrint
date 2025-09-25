@@ -9,4 +9,6 @@ title: Foot Print
 ---
 [[Algorithm/]]
 
-#
+# Math
+---
+[[Math/]]
