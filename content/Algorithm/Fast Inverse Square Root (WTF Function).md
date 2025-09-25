@@ -9,7 +9,6 @@ tags:
 aliases:
 ---
 
-
 ```cpp
 float Q_rsqrt( float number )
 {
