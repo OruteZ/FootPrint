@@ -1,13 +1,11 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
-import { Header } from "./quartz/components/Header"
-
 import * as Component from "./quartz/components"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: Header({
-    title: "Foot Print",   // ← 원하는 이름
+  header: Component.Header({
+    title: "Foot Print",
     links: [
       { text: "Projects", link: "/projects" },
       { text: "Notes",    link: "/notes" },
