@@ -2,7 +2,7 @@ name: Deploy Quartz
 
 on:
   push:
-    branches: [ main ]     # ← 기본 브랜치가 다르면 수정 (예: v4)
+    branches: [ main ]   # 기본 브랜치에 맞게 수정
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -19,20 +19,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        with: { fetch-depth: 0 }
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '22'   # ★ Quartz 4.5.x 요구사항
           cache: npm
-      - name: Install dependencies
+
+      - name: Bump npm (보수적으로 명시)
+        run: npm i -g npm@10.9.2 && npm -v && node -v
+
+      - name: Install deps
         run: npm ci
+
       - name: Build Quartz
-        run: npx quartz build          # ← 여기서 정적 사이트를 빌드(출력: public/)
+        run: npx quartz build    # 출력: ./public
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public                 # ← 반드시 public 으로!
+          path: public
 
   deploy:
     needs: build
@@ -41,6 +47,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
