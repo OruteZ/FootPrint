@@ -1,4 +1,4 @@
-# 문제 목록
+# 최근 작성한 목록
 ```dataview
 TABLE without id 
 	prob_id AS "Index", file.link AS "문제", tier AS "난이도"
