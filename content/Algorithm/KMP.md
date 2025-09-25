@@ -1,0 +1,1 @@
+[KMP](obsidian://vault/quartz/KMP)
