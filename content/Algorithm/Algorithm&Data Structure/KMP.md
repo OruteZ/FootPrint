@@ -74,10 +74,6 @@ aliases:
 
 ### 4. C++ 예시 코드
 
-cpp
-
-복사편집
-
 ```cpp
 #include <iostream>
 #include <vector>
