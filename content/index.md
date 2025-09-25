@@ -3,4 +3,12 @@ title: Home
 ---
 # PS
 ---
-[[PS/]
+[[PS/]]
+
+# Algorithm
+---
+[[Algorithm/]]
+
+# Math
+---
+[[Math/]]
