@@ -1,1 +1,0 @@
-[Mo's Algorithm](obsidian://vault/quartz/Mo's%20Algorithm)

@@ -1,1 +1,0 @@
-[Segment Tree - Lazy Propagation](obsidian://vault/quartz/Segment%20Tree%20-%20Lazy%20Propagation)

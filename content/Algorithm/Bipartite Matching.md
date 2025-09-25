@@ -1,1 +1,1 @@
-[Bipartite Matching](obsidian://vault/quartz/Bipartite%20Matching)
+Bipartite Matching](obsidian://vault/quartz/Bipartite%20Matching)
