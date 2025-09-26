@@ -184,7 +184,8 @@ $$
 
 이제 이 식에 x대신 $\frac1{\sqrt x} = x^{-\frac{1}{2}}$ 를 집어넣어보자.
 $$
-\begin{align}
+\begin{align} 
+\\
 I_{x^{-\frac{1}{2}}} & \approx -2^{22}log_{2}x+(127-U)2^{23} \\
 \end{align}
 $$
