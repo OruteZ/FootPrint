@@ -11,6 +11,7 @@ tags:
 
 - C++ : `set`, `map`
 - Java : `TreeMap`, `TreeSet`
+- C# : `SortedSet`, `SortedDictionary`
 <br>
 # Properties
 ---
