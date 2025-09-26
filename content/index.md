@@ -3,7 +3,7 @@ title: Home
 ---
 # About me
 ---
-유니티 개발과 PS, 게임, 랩을 좋아하는 대학생입니다.
+유니티 개발과 PS, 게임을 좋아하는 대학생입니다.
 
 📌 `Github` https://github.com/OruteZ
 
