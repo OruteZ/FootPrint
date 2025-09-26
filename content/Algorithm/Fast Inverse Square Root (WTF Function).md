@@ -79,7 +79,7 @@ float의 표현 비트는, 총 32비트다.
 각각 E와 F를 unsigned int로써 보았을 때, 실제 float x는 다음과 같이 표현된다.
 **$\sqrt x$ 를 구하는 과정이기에, Sign Bit는 무조건 0으로 본다.**
 $$
-X = 2^{E-127}(1 + \frac{F}{2^{23}})
+x = 2^{E-127}(1 + \frac{F}{2^{23}})
 $$
 <br><br>
 ## float $\Rightarrow$ long
@@ -114,9 +114,9 @@ $$
 아까 작성한 float x의 표현식에서, 양변에 $log_{2}$를 씌워보자.
 $$
 \begin{align}
-log_{2}x & = log_{2}\left(2^{E-127}\left(1 + \frac{F}{2^{23}}\right)\right) \\
-& = log_{2}{2^{E-127}} + log_{2}\left(1+\frac{F}{2^{23}}\right)\\
-& = (E - 127) + log_{2}\left(1+\frac{F}{2^{23}}\right)\\
+\log_{2}x & = \log_{2}\left(2^{E-127}\left(1 + \frac{F}{2^{23}}\right)\right) \\
+& = \log_{2}{2^{E-127}} + \log_{2}\left(1+\frac{F}{2^{23}}\right)\\
+& = (E - 127) + \log_{2}\left(1+\frac{F}{2^{23}}\right)\\
 \end{align}
 $$
 여기까지는 기존의 log 공식으로 도달 할 수 있다.
@@ -133,7 +133,7 @@ $$
 이제 $\frac{F}{2^{23}} - \frac{F}{2^{23}}$ 을 식의 적절한 곳에 추가해보자.
 $$
 \begin{align}
-log_{2}{x} & = (E + \frac{F}{2^{23}} - 127) + log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}\\
+\log_{2}{x} & = (E + \frac{F}{2^{23}} - 127) + log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}\\
 & =  \frac{I_x}{2^{23}} - 127 + \overbrace{log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}} ^ U
 \end{align}
 $$
