@@ -74,3 +74,19 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [],
 }
+
+afterBody: [
+  Component.Comments({
+    provider: 'giscus',
+    options: {
+      // data-repo
+      repo: 'OruteZ/FootPrint',
+      // data-repo-id
+      repoId: 'R_kgDOP2d4lA',
+      // data-category
+      category: 'Announcements',
+      // data-category-id
+      categoryId: 'DIC_kwDOP2d4lM4Cv6II',
+    }
+  }),
+],
