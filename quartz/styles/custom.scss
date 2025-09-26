@@ -1,3 +1,273 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+/* ===========================
+   Obsidian-Style Clean Theme
+   for Quartz v4 (custom.scss)
+   =========================== */
+
+/* 1) 컬러 토큰(라이트/다크 공통 이름) */
+:root {
+  --bg:        #fbfbfc;  /* 본문 배경 */
+  --surface:   #ffffff;  /* 카드/컨테이너 */
+  --text:      #1f2328;  /* 기본 텍스트 */
+  --muted:     #6b7280;  /* 보조 텍스트 */
+  --border:    #e5e7eb;  /* 경계선 */
+  --accent:    #7c3aed;  /* 포커스/링크 컬러 (보라) */
+  --accent-2:  #a78bfa;  /* 보라의 라이트 톤 */
+  --code-bg:   #f5f7fb;  /* 코드블록 */
+  --sel-bg:    rgba(124, 58, 237, 0.18);
+  --shadow:    0 4px 16px rgba(0,0,0,0.06);
+  --radius:    14px;
+}
+
+/* 2) 다크모드 토큰 (Quartz 토글이 보통 data-theme='dark'를 세팅)
+   - Quartz가 다른 속성을 쓴다면 body.dark, html.dark 등으로 바꿔도 됨 */
+[data-theme='dark'] {
+  --bg:        #1b1b1d;
+  --surface:   #222326;
+  --text:      #e6e6e9;
+  --muted:     #9aa0a6;
+  --border:    #2f3136;
+  --accent:    #a78bfa;   /* 다크에서 살짝 더 밝은 보라 */
+  --accent-2:  #c4b5fd;
+  --code-bg:   #111215;
+  --sel-bg:    rgba(167, 139, 250, 0.24);
+  --shadow:    0 6px 24px rgba(0,0,0,0.35);
+}
+
+/* 3) 전역 베이스 */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--sel-bg);
+}
+
+/* 4) 글꼴(시스템 기본) */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+               Noto Sans, Apple SD Gothic Neo, "맑은 고딕", "Malgun Gothic",
+               "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.65;
+  letter-spacing: .1px;
+}
+
+/* 5) 링크 */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* 6) 헤딩(Obsidian 느낌: 진하게, 간격 넉넉) */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: .2px;
+  line-height: 1.25;
+  margin: 1.4em 0 .6em;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+
+/* 7) 컨테이너/카드 공통 */
+.card, .content, article, .surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Quartz 기본 레이아웃 요소들을 부드럽게(선택자 여유롭게) */
+main, article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(16px, 2vw, 28px);
+}
+
+/* 8) 내비/헤더/푸터 */
+header, nav, .top-nav, .site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: saturate(140%) blur(6px);
+}
+header a, nav a {
+  color: var(--text);
+}
+header a:hover, nav a:hover {
+  color: var(--accent);
+}
+
+/* 9) 사이드바/탐색기/TOC */
+aside, .sidebar, .toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px 14px;
+}
+.toc a { color: var(--text); }
+.toc a:hover { color: var(--accent); }
+
+/* 10) 블록 인용 & Callout */
+blockquote {
+  margin: 1.2em 0;
+  padding: 12px 16px;
+  background: color-mix(in srgb, var(--accent), transparent 92%);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+/* Obsidian 스타일 callout 문법: > [!note] 같은 변환 결과를 가정 */
+[data-callout], .callout {
+  margin: 1.2em 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  .callout-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    font-weight: 600;
+    background: color-mix(in srgb, var(--accent), transparent 88%);
+    border-bottom: 1px solid var(--border);
+  }
+  .callout-content {
+    padding: 12px 14px;
+  }
+}
+
+/* callout 타입별 강조 컬러 (속성/클래스 둘 다 대응) */
+[data-callout='note'],   .callout.note   { --accent: #7c3aed; }
+[data-callout='info'],   .callout.info   { --accent: #2563eb; }
+[data-callout='tip'],    .callout.tip    { --accent: #059669; }
+[data-callout='warning'],.callout.warning{ --accent: #d97706; }
+[data-callout='danger'], .callout.danger { --accent: #dc2626; }
+
+/* 11) 코드 스타일(인라인/블록) */
+code, kbd, samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace;
+  font-size: .92em;
+}
+
+:not(pre) > code {
+  background: color-mix(in srgb, var(--code-bg), transparent 0%);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2px 6px;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  overflow: auto;
+  box-shadow: var(--shadow);
+}
+pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* 복사 버튼이 붙는 경우 */
+.copy-code, .code-copy, button.copy {
+  border-radius: 8px;
+}
+
+/* 12) 표(Table) */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+thead th {
+  background: color-mix(in srgb, var(--accent), transparent 90%);
+  font-weight: 700;
+  text-align: left;
+}
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+tbody tr:hover {
+  background: color-mix(in srgb, var(--accent), transparent 96%);
+}
+
+/* 13) 이미지 & 미디어 */
+img, video, figure {
+  border-radius: 12px;
+}
+
+/* 14) 태그/칩 */
+.tag, .tags a, a.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px 6px 2px 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent), transparent 94%);
+  color: var(--text);
+  text-decoration: none;
+  font-size: .85em;
+}
+
+/* 15) 검색 하이라이트(있다면) */
+.search-highlight, mark {
+  background: var(--sel-bg);
+  padding: 1px 3px;
+  border-radius: 4px;
+}
+
+/* 16) Mermaid/다이어그램 컨테이너(있다면) */
+.mermaid {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* 17) 푸터 */
+footer {
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+/* 18) 작은 UI 요소 */
+kbd {
+  border: 1px solid var(--border);
+  border-bottom-width: 3px;
+  border-radius: 6px;
+  background: var(--surface);
+  padding: 1px 6px;
+  font-size: .85em;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
