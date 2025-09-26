@@ -1,5 +1,8 @@
 name: Deploy Quartz
 
+env:
+  THEME_NAME: moonlight
+
 on:
   push:
     branches: [ main ]   # 기본 브랜치에 맞게 수정
@@ -31,6 +34,9 @@ jobs:
 
       - name: Install deps
         run: npm ci
+
+      - name: Fetch Quartz Theme
+        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
 
       - name: Build Quartz
         run: npx quartz build    # 출력: ./public
