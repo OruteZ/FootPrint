@@ -4,23 +4,19 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
-    Component.PageTitle(),   // 사이트/페이지 타이틀
-    Component.Spacer(),      // 왼쪽 타이틀 ↔ 오른쪽 아이콘 사이 간격
-    // 여기 뒤에 검색/다크모드 등 헤더용 버튼 배치
+    Component.PageTitle(),  
+    Component.Spacer(),     
     Component.Search(),
     Component.Darkmode(),
   ],
   afterBody: [
+    // addon: giscus를 통한 댓글 시스템
     Component.Comments({
     provider: 'giscus',
     options: {
-      // data-repo
       repo: 'OruteZ/FootPrint',
-      // data-repo-id
       repoId: 'R_kgDOP2d4lA',
-      // data-category
       category: 'Replies',
-      // data-category-id
       categoryId: 'DIC_kwDOP2d4lM4Cv6II',
     }
   })],
@@ -60,7 +56,17 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: {
+        depth: 2,     
+        drag: true,
+        zoom: true,
+        scale: 1.1,
+        repelForce: 0.5,
+        centerForce: 0.3,
+        linkDistance: 30,
+      },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
