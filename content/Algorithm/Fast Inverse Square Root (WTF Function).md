@@ -133,7 +133,7 @@ $$
 이제 $\frac{F}{2^{23}} - \frac{F}{2^{23}}$ 을 식의 적절한 곳에 추가해보자.
 $$
 \begin{align}
-log_{2}x & = (E + \frac{F}{2^{23}} - 127) + log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}\\
+log_{2}{x} & = (E + \frac{F}{2^{23}} - 127) + log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}\\
 & =  \frac{I_x}{2^{23}} - 127 + \overbrace{log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}} ^ U
 \end{align}
 $$
@@ -162,7 +162,7 @@ $$
 ## 결론
 ---
 $$
-\begin{align}
+\begin{align} \\
 & \log_{2}x \approx \frac{I_x}{2^{23}} -127 + U \\
 & U = 0.043 . . .. 
 \end{align}
@@ -176,7 +176,7 @@ $$
 ---
 우선, 식을 이항해서 $I_{x} = \dots$ 형식으로 변경해보자.
 $$
-\begin{align}
+\begin{align} \\
 & \log_{2}x \approx \frac{I_x}{2^{23}} -127 + U ,\\
 & I_{x}\approx 2^{23}log_{2}{x} +2^{23}(127 - U)
 \end {align}
@@ -192,7 +192,7 @@ $$
 다시 $log_{2}x$ 가 튀어나왔다!
 이전에 만든 수식을 집어넣자!
 $$
-\begin{align}
+\begin{align} \\
 I_{x^{-\frac{1}{2}}} & \approx -\frac{1}{2}I_{x}+2^{22}(127-U)+2^{23}(127 -U) \\
 &=-\frac{1}{2}I_{x}+(2^{22} +2^{23})(127-U)\\
 &=-\frac{1}{2}I_{x}+\overbrace{\frac{2}{3} \times 2^{23}(127-U)} ^ {K} \\\\\\
