@@ -1,14 +1,5 @@
 ---
 title: Home
 ---
-# PS
+# About
 ---
-[[PS/]]
-
-# Algorithm
----
-[[Algorithm/]]
-
-# Math
----
-[[Math/]]
