@@ -10,7 +10,21 @@ export const sharedPageComponents: SharedLayout = {
     Component.Search(),
     Component.Darkmode(),
   ],
-  afterBody: [],
+  afterBody: [
+    Component.Comments({
+    provider: 'giscus',
+    options: {
+      // data-repo
+      repo: 'OruteZ/FootPrint',
+      // data-repo-id
+      repoId: 'R_kgDOP2d4lA',
+      // data-category
+      category: 'Announcements',
+      // data-category-id
+      categoryId: 'DIC_kwDOP2d4lM4Cv6II',
+    }
+  })],
+  
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
@@ -74,19 +88,3 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [],
 }
-
-afterBody: [
-  Component.Comments({
-    provider: 'giscus',
-    options: {
-      // data-repo
-      repo: 'OruteZ/FootPrint',
-      // data-repo-id
-      repoId: 'R_kgDOP2d4lA',
-      // data-category
-      category: 'Announcements',
-      // data-category-id
-      categoryId: 'DIC_kwDOP2d4lM4Cv6II',
-    }
-  }),
-],
