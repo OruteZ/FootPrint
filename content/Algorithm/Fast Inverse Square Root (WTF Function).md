@@ -133,8 +133,8 @@ $$
 이제 $\frac{F}{2^{23}} - \frac{F}{2^{23}}$ 을 식의 적절한 곳에 추가해보자.
 $$
 \begin{align}
-\log_{2}{x} & = (E + \frac{F}{2^{23}} - 127) + log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}\\
-& =  \frac{I_x}{2^{23}} - 127 + \overbrace{log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}} ^ U
+\log_{2}{x} & = (E + \frac{F}{2^{23}} - 127) + \log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}\\
+& =  \frac{I_x}{2^{23}} - 127 + \overbrace{\log_{2}\left(1+\frac{F}{2^{23}}\right)  - \frac{F}{2^{23}}} ^ U
 \end{align}
 $$
 <div style="page-break-after: always;"></div>
@@ -178,7 +178,7 @@ $$
 $$
 \begin{align} \\
 & \log_{2}x \approx \frac{I_x}{2^{23}} -127 + U ,\\
-& I_{x}\approx 2^{23}log_{2}{x} +2^{23}(127 - U)
+& I_{x}\approx 2^{23}\log_{2}{x} +2^{23}(127 - U)
 \end {align}
 $$
 
@@ -186,7 +186,7 @@ $$
 $$
 \begin{align} 
 \\
-I_{x^{-\frac{1}{2}}} & \approx -2^{22}log_{2}x+(127-U)2^{23} \\
+I_{x^{-\frac{1}{2}}} & \approx -2^{22}\log_{2}x+(127-U)2^{23} \\
 \end{align}
 $$
 다시 $log_{2}x$ 가 튀어나왔다!
