@@ -67,7 +67,10 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+        filter:   (node) => !node.path.split("/").some(seg => seg.startsWith("__")),
+        filterFn: (node) => !node.path.split("/").some(seg => seg.startsWith("__")),
+      }),
   ],
   right: [],
 }
