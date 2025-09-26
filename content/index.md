@@ -5,9 +5,8 @@ title: Home
 ---
 유니티 개발과 PS, 게임, 랩을 좋아하는 대학생입니다.
 
-:pushpin: `Github` 
-
-
+:pushpin: `Github` https://github.com/OruteZ
+:pushpin: `Email` dwd0102@sju.ac.kr or creeperss85@gmail.com
 
 # Category
 ---
