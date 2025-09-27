@@ -1,3 +1,5 @@
+formulas:
+  Tier: ""
 views:
   - type: table
     name: Table
@@ -9,7 +11,14 @@ views:
       - file.name
       - prob_id
       - prob_name
-      - tier
       - created_date
+      - tier
+      - formula.Tier
+    sort:
+      - property: tier
+        direction: ASC
+      - property: created_date
+        direction: DESC
+    limit: 10
     columnSize:
       note.prob_name: 217
