@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder.endsWith("PS")
+    order:
+      - file.name
+      - prob_id
+      - prob_name
+      - tier
+      - created_date
+    columnSize:
+      note.tags: 424
