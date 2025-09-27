@@ -24,14 +24,15 @@ views:
       - file.name
       - prob_id
       - prob_name
+      - formula.Tier
       - created_date
     sort:
-      - property: formula.Tier
-        direction: ASC
-      - property: tier
-        direction: ASC
       - property: created_date
         direction: DESC
+      - property: tier
+        direction: ASC
     limit: 10
     columnSize:
-      note.prob_name: 217
+      file.name: 199
+      note.prob_name: 192
+      formula.Tier: 112
