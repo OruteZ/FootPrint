@@ -1,5 +1,20 @@
 formulas:
-  Tier: ""
+  Tier: |-
+    // Formula
+    (
+      if( ((number(tier)-1)/5).floor() == 0, "브론즈",
+      if( ((number(tier)-1)/5).floor() == 1, "실버",
+      if( ((number(tier)-1)/5).floor() == 2, "골드",
+      if( ((number(tier)-1)/5).floor() == 3, "플레티넘",
+      if( ((number(tier)-1)/5).floor() == 4, "다이아", "루비"))))))
+    )
+    + " "
+    + (
+      5 - ( (number(tier)-1) - (((number(tier)-1)/5).floor() * 5) )
+    ).toString()
+properties:
+  note.tier:
+    displayName: tier_int
 views:
   - type: table
     name: Table
@@ -11,10 +26,11 @@ views:
       - file.name
       - prob_id
       - prob_name
-      - created_date
-      - tier
       - formula.Tier
+      - created_date
     sort:
+      - property: formula.Tier
+        direction: ASC
       - property: tier
         direction: ASC
       - property: created_date
