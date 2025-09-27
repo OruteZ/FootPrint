@@ -4,6 +4,7 @@ views:
     filters:
       and:
         - file.folder.endsWith("PS")
+        - file.hasTag("problem_solving")
     order:
       - file.name
       - prob_id
@@ -11,4 +12,4 @@ views:
       - tier
       - created_date
     columnSize:
-      note.tags: 424
+      note.prob_name: 217
