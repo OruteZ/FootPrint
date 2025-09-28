@@ -58,7 +58,7 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.Graph({
       localGraph: {
-        depth: 2,     
+        depth: 1,     
         drag: true,
         zoom: true,
         scale: 1.1,
