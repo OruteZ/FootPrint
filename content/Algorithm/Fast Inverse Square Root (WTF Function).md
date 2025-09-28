@@ -8,8 +8,6 @@ tags:
   - computer_science
 aliases:
 ---
-
-
 ```cpp
 float Q_rsqrt( float number )
 {
@@ -110,6 +108,7 @@ $$
 <div style="page-break-after: always;"></div>
 <br><br>
 ## 전개 과정
+
 ---
 아까 작성한 float x의 표현식에서, 양변에 $log_{2}$를 씌워보자.
 $$
@@ -140,6 +139,7 @@ $$
 <div style="page-break-after: always;"></div>
 <br><br>
 ## 상수 U의 정확도 증명
+
 ---
 여기까지 잘 따라왔다면, 이상한 점이 보인다. 
 분명 $U=0.043 \cdots$ 인데, 어째서 U에는 F가 들어가있을까? 이건 상수가 아니지 않은가?
