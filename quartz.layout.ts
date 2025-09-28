@@ -23,8 +23,8 @@ export const sharedPageComponents: SharedLayout = {
   
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/OruteZ/FootPrint",
+      "Email" : "creeperss85@gmail.com",
     },
   }),
 }
@@ -54,6 +54,12 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
+    Component.RecentNotes({
+        title: "Recent Updates",
+        limit: 6,             // 보여줄 개수
+        showTags: false,      // 태그 숨길지
+        linkToMore: "tags/",  // 더보기 링크(실존하는 슬러그로)
+      }),
   ],
   right: [
     Component.Graph({
