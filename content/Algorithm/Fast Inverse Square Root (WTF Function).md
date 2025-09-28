@@ -122,7 +122,7 @@ $$
 여기까지는 기존의 log 공식으로 도달 할 수 있다.
 여기서 우리는 $I_x$를 유도해낼 것이다.
 $$
-\begin{align}
+\begin{align} \\
 I_{x}= 2^{23}E + F \\
 \therefore \frac{I_x}{2^{23}} = E + \frac{F}{2^{23}}
 \end{align}
