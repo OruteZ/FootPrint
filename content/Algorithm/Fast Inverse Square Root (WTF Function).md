@@ -107,6 +107,7 @@ $$
 이 이하로 이 수식의 도출 과정을 작성하였다.
 <div style="page-break-after: always;"></div>
 <br><br>
+
 ## 전개 과정
 
 ---
@@ -138,6 +139,7 @@ $$
 $$
 <div style="page-break-after: always;"></div>
 <br><br>
+
 ## 상수 U의 정확도 증명
 
 ---
@@ -172,6 +174,7 @@ $$
 <div style="page-break-after: always;"></div>
 
 <br><br>
+
 # 나눗셈 없이 $I_x$ 와 함께 $\frac{1}{\sqrt x}$ 구하기
 ---
 우선, 식을 이항해서 $I_{x} = \dots$ 형식으로 변경해보자.
@@ -208,7 +211,9 @@ i = 0x5f3759df - ( i >> 1 ); // what the fuck?
 ```
 <div style="page-break-after: always;"></div>
 <br><br>
+
 # 뉴턴-랩슨 방법
+
 ---
 이로서 $\frac{1}{\sqrt x}$ 의 근사치를 찾아낼 수 있게 되었다.
 그러나 오차율이 꽤나 많이 나기 때문에, 뉴턴/랩슨 방법을 활용하여 오차를 획기적으로 줄이는 과정이 마지막으로 필요하다.
