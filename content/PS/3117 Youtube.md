@@ -5,7 +5,7 @@ prob_name: Youtube
 link: https://www.acmicpc.net/problem/3117
 tier: 15
 tags:
-  - "#problem_solving"
+  - "#ps"
 ---
 # Link
 https://www.acmicpc.net/problem/3117

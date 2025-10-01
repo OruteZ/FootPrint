@@ -4,7 +4,7 @@ updated_date: 2025-09-25
 type:
   - Algorithm Note
 tags:
-  - "#problem_solving"
+  - "#ps"
   - sweeping
 aliases:
   - sweeping

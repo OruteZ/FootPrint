@@ -1,7 +1,7 @@
 ---
 created_date: 2025-09-27
 tags:
-  - tree
+  - data_structure/tree
   - data_structure
 ---
 이 트리는 이진 탐색 트리의 일종으로, 트리의 균형을 유지하기 위해서 노드에 색상을 부여하고, 필수로 준수해야 하는 규칙을 추가한 트리다.
