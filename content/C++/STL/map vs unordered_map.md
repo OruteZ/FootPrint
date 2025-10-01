@@ -3,7 +3,7 @@ created_date: 2025-09-27
 tags:
   - cpp
   - data_structure
-  - stl
+  - cpp/stl
 ---
 # map
 ---

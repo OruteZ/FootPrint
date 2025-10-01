@@ -5,7 +5,7 @@ type:
   - Algorithm Note
 tags:
   - "#ps"
-  - sweeping
+  - algorithm/sweeping
 aliases:
   - sweeping
 ---
