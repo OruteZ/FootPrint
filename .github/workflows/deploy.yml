@@ -1,7 +1,7 @@
 name: Deploy Quartz
 
 env:
-  THEME_NAME: minimal
+  THEME_NAME: minimalists-paradise
 
 on:
   push:
