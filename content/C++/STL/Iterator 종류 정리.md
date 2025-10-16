@@ -34,7 +34,14 @@ publish: false
 # Forward
 ---
 input과 output의 기능을 모두 지원해준다.
-`++`,`+=` 연산자를 통해 다음으로 넘어갈 수 있다
+`++` 연산자를 통해 다음으로 넘어갈 수 있다
 
-> _단, +를 활용하여 앞으로 이동하는 연산은 Input과 Output을 포함한 모든 `iterator`가 지원해준다._
+> _단, ++를 활용하여 앞으로 이동하는 연산은 Input과 Output을 포함한 모든 `iterator`가 지원해준다._
+<br>
 
+# Bidirectional
+---
+`--` 연산자를 통해서 '뒤'로 이동할 수 있다.
+<br>
+# Random Access
+---
