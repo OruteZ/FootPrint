@@ -20,8 +20,11 @@ publish: false
 이 기능을 보장해주며 순회가 가능한 `forward iterator`, 역행이 가능한 `bidirectional iterator`, 인덱스 기반 접근이 가능한 `random access iterator`로 구분된다.
 
 <br>
+
 # Input, Output
 ---
 ## Input
 이 `iterator`가 가리키는 값을 읽을 수 있다.
-`==`, ``
+`==`, `!=`, `*`, `->` 연산이 가능하다
+
+## Output
