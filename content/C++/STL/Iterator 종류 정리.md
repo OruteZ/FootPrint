@@ -13,7 +13,7 @@ publish: false
 
 이에 따라서 `iterator`에도 그 종류가 정해져 있다.
 <br>
-# 개괄
+# Categories
 ---
 ![[Pasted image 20251016094628.png]]
 가장 좁은 기능을 하는 두 `iterator`인 `input`과 `output`이 있다.
@@ -21,17 +21,17 @@ publish: false
 
 <br>
 
-# Input, Output
+## Input, Output
 ---
-## Input
+### Input
 이 `iterator`가 가리키는 값을 읽을 수 있다.
 `==`, `!=`, `*`, `->` 연산이 가능하다
 
-## Output
+### Output
 할당 연산이 가능하다 (_`const`가 아니어야 한다._)
 <br>
 
-# Forward
+## Forward
 ---
 input과 output의 기능을 모두 지원해준다.
 `++` 연산자를 통해 다음으로 넘어갈 수 있다
@@ -39,12 +39,17 @@ input과 output의 기능을 모두 지원해준다.
 > _단, ++를 활용하여 앞으로 이동하는 연산은 Input과 Output을 포함한 모든 `iterator`가 지원해준다._
 <br>
 
-# Bidirectional
+## Bidirectional
 ---
 `--` 연산자를 통해서 '뒤'로 이동할 수 있다.
 <br>
-# Random Access
+## Random Access
 ---
 - 각 `iterator`에 인덱스를 매길 수 있어 `[]` 연산자로 참조할 수 있다.
 - `+`,`-` 연산으로 여러 칸을 한 번에 이동할 수 있다.
 - `<, >, <=, >=` 대소 비교 연산이 가능하다.
+
+# Container - Iterator
+---
+- input iterator
+	- istream_i
