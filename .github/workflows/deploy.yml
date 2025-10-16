@@ -1,7 +1,7 @@
 name: Deploy Quartz
 
 env:
-  THEME_NAME: adrenaline
+  THEME_NAME: minimal
 
 on:
   push:
