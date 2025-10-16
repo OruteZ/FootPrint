@@ -15,3 +15,8 @@ tags:
 # 개괄
 ---
 ![[Pasted image 20251016094628.png]]
+가장 좁은 기능을 하는 두 `iterator`인 `input`과 `output`이 있다.
+이 기능을 보장해주며 순회가 가능한 `forward iterator`, 역행이 가능한 `bidirectional iterator`, 인덱스 기반 접근이 가능한 `random access iterator`로 구분된다.
+
+
+# Input, 
