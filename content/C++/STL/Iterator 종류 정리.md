@@ -3,7 +3,7 @@ created_date:
   - 2025-10-16
 tags:
   - cpp/stl
-publish: false
+publish: true
 ---
 # Iterator
 ---
@@ -52,4 +52,16 @@ input과 output의 기능을 모두 지원해준다.
 # Container - Iterator
 ---
 - input iterator
-	- istream_i
+	- istream_iterator
+- output iterator
+	- ostream_iterator, inserter, front_inserter, back_insterter
+- bidirectional_iterator
+	- `list`, `set`, `multiset`, `map`, `multimap`
+- random_access_iterator
+	- `c-style pointer`, `vector`, `deque`
+
+<br>
+
+# Reference
+---
+- https://cplusplus.com/reference/iterator/
